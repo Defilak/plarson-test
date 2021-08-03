@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* шапка не должна быть меньше 50px */
+.header {
+    flex-basis: 50px;
+    flex-shrink: 0;
+}
+
+/* main занимает всю доступную высоту но не более. если контента много то прокручивает */
+.main {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* подвал не должен быть меньше 200px */
+.footer {
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+
+/* содержимое main */
+
+/* содержимое автоматически выравнивается по высоте */
+.chat-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* минимальная ширина 200 */
+.sidebar {
+    flex-basis: 200px;
+    overflow-y: auto;
+}
+
+/* заполняет все оставшееся пространство */
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+}

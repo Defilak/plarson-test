@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header,
+.footer {
+    background-color: #212529;
+    color: white;
+    padding:10px;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    border-right: 1px solid #212529;
+}
+
+.messages, .sidebar {
+    padding: 5px 0;
+}
+
+.sidebar-user,
+.user-message {
+    padding: 5px 10px;
+}
