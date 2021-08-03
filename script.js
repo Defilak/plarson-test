@@ -1,13 +1,16 @@
 function $(cb) {
-    window.addEventListener('load', cb)
+    if (document.readyState === 'complete') {
+        cb()
+    } else {
+        window.addEventListener('load', cb)
+    }
 }
 
-
-$(function() {
+$(function () {
     let sidebar = document.querySelector('.sidebar')
     let chat = document.querySelector('.messages')
 
-    for(let i = 0; i < 50; i++) {
+    for (let i = 0; i < 50; i++) {
         let userEl = document.createElement('p')
         userEl.className = 'sidebar-user'
         userEl.innerText = 'User' + Math.floor(Math.random() * 10000)
